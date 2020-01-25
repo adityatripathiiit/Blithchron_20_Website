@@ -1,0 +1,117 @@
+//for title text Blithchron 20-----------------------------------------------------------------------
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 1rem #fff, 0 0 2rem #fff, 0 0 3rem #fff, 0 0 4rem #FFDD1B, 0 0 7rem #FFDD1B, 0 0 8rem #FFDD1B, 0 0 10rem #FFDD1B, 0 0 15rem #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 0.5rem #fff, 0 0 1rem #fff, 0 0 1.5rem #fff, 0 0 2rem #FFDD1B, 0 0 3.5rem #FFDD1B, 0 0 4rem #FFDD1B, 0 0 5rem #FFDD1B, 0 0 7.5rem #FFDD1B;
+  }
+}
+//again for title text blithchron 20--------------------------------------------------------------
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+
+//for date shake--------------------------------------------------------------------------------------
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+// for secondary-headings
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+// for animating nav-links hover------------------------------------------------------------------------
+@keyframes hover-v {
+  0% {
+      transform: scaleX(0);
+      height: 0.5rem;
+     }
+  45% {   
+      transform: scaleX(1.05);
+      height: 0.5rem;
+     }
+  55% {height: 0.5rem;}
+  100% {
+      transform: scaleX(1.05);
+      height: 3.8rem;
+     }
+}
+@keyframes no-hover-v {
+  0% {
+      transform: scaleX(1.05);
+      height: 4rem;
+     }
+  45% {height: 0.5rem;}
+  55% {   
+      transform: scaleX(1.05);
+      height: 0.5rem;
+      opacity: 1;
+     }
+  
+  100% {
+      transform: scaleX(0);
+      height: 0.5rem;
+      opacity: .02;
+     }
+}
+
+//for skew button------------------------------------------------------------------------
+@keyframes swoosh {
+	0% {
+		transform-origin: left center;
+	}
+	
+	20% {
+		transform: skewX(-20deg) scaleX(1);
+		transform-origin: left center;
+	}
+	
+	21% {
+		transform-origin: right center;
+	}
+	
+	50% {
+		transform: skewX(-20deg) scaleX(0);
+		transform-origin: right center;
+	}
+}
+
+@keyframes fill {
+	0% {
+		background-color: rgba($color-skew-button, 0);
+	}
+	
+	20% {
+		opacity: .5;
+		border-width: 0px;
+		border-color: darken($color-skew-button, 10%);
+	}
+	
+	100% {
+		opacity: .5;
+		border-width: 1px;
+		background-color: rgba($color-skew-button, 0.5);
+	}
+}
+//for skew button ends**

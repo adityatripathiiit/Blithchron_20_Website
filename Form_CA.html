@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="js/mainCR.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/CR/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/CR/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/utilCR.css">
+	<link rel="stylesheet" type="text/css" href="css/mainCR.css">
+	<style>
+		.s-hidden {
+			visibility:hidden;
+			padding-right:10px;
+		}
+		.select {
+			cursor:pointer;
+			display:inline-block;
+			position:relative;
+			font:normal 11px/22px Arial, Sans-Serif;
+			color:black;
+			border:1px solid #ccc;
+		}
+		.styledSelect {
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			background-color:white;
+			padding:0 10px;
+			font-weight:bold;
+		}
+		.styledSelect:after {
+			content:"";
+			width:0;
+			height:0;
+			border:5px solid transparent;
+			border-color:black transparent transparent transparent;
+			position:absolute;
+			top:9px;
+			right:6px;
+		}
+		.styledSelect:active, .styledSelect.active {
+			background-color:#eee;
+		}
+		.options {
+			display:none;
+			position:absolute;
+			top:100%;
+			right:0;
+			left:0;
+			z-index:999;
+			margin:0 0;
+			padding:0 0;
+			list-style:none;
+			border:1px solid #ccc;
+			background-color:white;
+			-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+			box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+		}
+		.options li {
+			padding:0 6px;
+			margin:0 0;
+			padding:0 10px;
+		}
+		.options li:hover {
+			background-color:#39f;
+			color:white;
+		}</style>
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-image: url('images/bg-01CR.jpg');">
+		<div class="wrap-contact100" >
+			<form class="contact100-form " name="submit-to-google-sheet">
+				<span class="contact100-form-title">
+					CAMPUS AMBASSADOR PROGRAM
+					
+					<br>
+					<h6>
+					Please fill the below form (All fields are manditory)</h6>
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Full Name *</span>
+					<input class="input100" type="text" name="Full Name" placeholder="Enter your name">
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Gender *</span>
+					<div class="custom-select" style="width:150px;">
+							<select id="selectbox1" name="Gender">
+									<option value="">Select an option&hellip;</option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+									<option value="Other">Other</option>
+									
+								</select>
+					  </div>
+					</div>
+
+				<div class="wrap-input100 validate-input"  data-validate="Institute Name and Address is required">
+					<span class="label-input100">Institute Name & Address</span>
+					<input class="input100" type="text" name="Institute Name & Address" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat">
+				</div>					
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Program is required">
+					<span class="label-input100">Program *</span>
+					<input class="input100" type="text" name="Program" placeholder="Ex: Bachelor/Masters/Doctorate/Others">
+				</div>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Graduating Year is required">
+					<span class="label-input100">Graduating Year *</span>
+					<input class="input100" type="text" name="Graduating Year" placeholder="Ex: 2021">
+				</div>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Enter your email *</span>
+					<input class="input100" type="text" name="email" placeholder="Enter your email">
+				</div>				
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Contact Number is required">
+					<span class="label-input100">Contact Number (WhatsApp) *</span>
+					<input class="input100" type="text" name="Contact Number (WhatsApp)" placeholder="Enter your Mobile Number">
+				</div>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Facebook Username is required">
+					<span class="label-input100">Facebook Username *</span>
+					<input class="input100" type="text" name="Facebook Username" placeholder="Facebook Username">
+				</div>																						
+
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Instagram Username is required">
+					<span class="label-input100">Instagram Username *</span>
+					<input class="input100" type="text" name="Instagram Username" placeholder="Instagram Username">
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "SOP is required">
+					<span class="label-input100">Why should we choose you?</span>
+					<textarea class="input100" name="SOP" placeholder="Campus Ambassador is an opportunity for me to......"></textarea>
+				</div>
+What can you do for us? (multiple choices possible) <br><br> <div class="form-check"> <input type="checkbox" name="I will circulate the posts shared by Blithchron'20 in my college community." value="YES" class="form-check-input" id="1"> <label class="form-check-label" for="1">I will circulate the posts shared by Blithchron'20 in my college community.</label> <br> <input name="I will help in getting permissions for marketing and for organizing mini-events inside my college premises." type="checkbox" class="form-check-input" id="2" value="YES"> <label class="form-check-label" for="2">I will help in getting permissions for marketing and for organizing mini-events inside my college premises.</label> <br> <input name="I can help you in getting participation in various events to be held in Blithchron'20." type="checkbox" class="form-check-input" id="3" value="YES"> <label class="form-check-label" for="3">I can help you in getting participation in various events to be held in Blithchron'20.</label> <br> <input name="I can bring visitors to Blithchron'20." type="checkbox" class="form-check-input" id="4" value="YES"> <label class="form-check-label" for="4">I can bring visitors to Blithchron'20.</label> <br> <input name="other" type="checkbox" class="form-check-input" id="5" value="YES"> <label class="form-check-label" for="5">Other</label> <br> 
+	<div class="wrap-input100">
+		<span class="label-input100">How? *</span>
+		<input class="input100" type="text" name="other selected, how?" placeholder="if other is ticked">
+	</div>
+	You are responsible for the points that you choose, failing which, you will lose upon incentives. <BR><br>By clicking the submit button, you agree to our <a href="./TC_CA.pdf" style="text-align:left !important;">Terms &amp; Conditions</a><br><br></div>
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn" type="submit" onclick="window.location.href = 'thank_you.html'">
+							Submit
+						</button>
+					</div>
+				</div>
+			</form>
+			<script>					const scriptURL = 'https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbxeig9jCCMqjqoY0235-nLtwk_pR2NcmZ3bJm7N/exec'
+					const form = document.forms['submit-to-google-sheet']
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+						alert("Your Response is Noted. Click Ok")
+					})</script>
+		</div>
+
+		<span class="contact100-more">
+			<div class="container-contact100-form-btn">
+				<div class="wrap-contact100-form-btn">
+					<div class="contact100-form-bgbtn"></div>
+					<button class="contact100-form-btn" onclick="window.location.href = 'http://blithchron.iitgn.ac.in/team.html'">
+						Contact Us
+					</button>
+				</div>
+			</div>
+		</span>
+	</div>
+<script>
+
+$('select').each(function () {
+var $this = $(this),
+	numberOfOptions = $(this).children('option').length;
+$this.addClass('s-hidden');
+$this.wrap('<div class="select"></div>');
+$this.after('<div class="styledSelect"></div>');
+var $styledSelect = $this.next('div.styledSelect');
+$styledSelect.text($this.children('option').eq(0).text());
+var $list = $('<ul />', {
+	'class': 'options'
+}).insertAfter($styledSelect);
+for (var i = 0; i < numberOfOptions; i++) {
+	$('<li />', {
+		text: $this.children('option').eq(i).text(),
+		rel: $this.children('option').eq(i).val()
+	}).appendTo($list);
+}
+var $listItems = $list.children('li');
+$styledSelect.click(function (e) {
+	e.stopPropagation();
+	$('div.styledSelect.active').each(function () {
+		$(this).removeClass('active').next('ul.options').hide();
+	});
+	$(this).toggleClass('active').next('ul.options').toggle();
+});
+
+$listItems.click(function (e) {
+	e.stopPropagation();
+	$styledSelect.text($(this).text()).removeClass('active');
+	$this.val($(this).attr('rel'));
+	$list.hide();
+});
+$(document).click(function () {
+	$styledSelect.removeClass('active');
+	$list.hide();
+});
+
+});
+
+</script>
+
+</body>
+</html>

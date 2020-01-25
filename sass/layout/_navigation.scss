@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Quando);
+.navigation{
+    width: 0;
+    font-family: Quando;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    // background-image: linear-gradient(to bottom right,rgba(255, 14, 72,0.8),rgba(233, 151, 135,0.8)), url("https://media.gettyimages.com/photos/indian-bollywood-actor-and-singer-ayushmann-khurrana-takes-part-in-picture-id904677372?s=2048x2048");
+    // background-size:cover;
+    // background-position: top;
+    background: darken($color-background,10%);
+    opacity: 0;
+    overflow-x: hidden;
+    transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+    &--overlay{
+        width: 25%;
+        height: 100vh;
+        opacity:1;
+        @include desktop-respond(lg)
+        {
+            width: 35%;
+        }
+        @include desktop-respond(md)
+        {
+            width: 45%;
+        }
+        @include desktop-respond(sm)
+        {
+            width: 55%;
+        }
+        @include desktop-respond(xs)
+        {
+            width: 65%;
+        }
+    }
+
+    &__button{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-color: rgba(darken($color-background,20%), 0.3);
+        z-index: 1000;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    &__list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        list-style-type: none;
+    }
+
+    &__item{
+        margin: 1.5rem;
+    }
+
+    &__link{
+        &:link, &:visited{
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        color: rgba($color-white,0.6);
+        text-decoration: none;
+        text-transform: capitalize;
+        position: relative;
+        transition: 0.3s;
+        }
+
+        &:hover{
+            transition: all 0.4s;
+        }
+        &:before{
+            content: "";
+            background: rgba(lighten($color-background,10%),0.5);
+            position: absolute;
+            width: 110%;
+            height: 0.5rem;
+            bottom: 10%;
+            left: -5%;
+            border-radius: 5px;
+            transform: scaleX(0);
+            animation: 0.4s forwards no-hover-v linear;
+            animation-fill-mode: forwards;
+            z-index: -1;
+        }
+
+        &:hover:before{
+        animation: .4s forwards hover-v linear;
+        animation-fill-mode: forwards;
+        }
+    }
+
+    //ICON
+    &__icon{
+        position: relative;
+        margin-top: 3rem;
+
+        &,
+        &::before,
+        &::after{
+        display: inline-block;
+        overflow-x: visible;
+        width: 3rem;
+        height: 2px;
+        background-color: rgba(white,0.6);
+        transition: all 0.6s 0.2s;
+        }
+        
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+        }
+
+        &::before{ top: -0.8rem; }
+        &::after{ top: 0.8rem; }
+
+        &--overlay{
+            background-color: transparent;
+            &::before{
+                top:0;
+                transform: rotate(45deg);
+            }
+
+            &::after{
+                top:0;
+                transform: rotate(-45deg);
+            }
+
+        }
+    }
+}
+

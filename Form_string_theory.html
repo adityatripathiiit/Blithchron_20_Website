@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" 	name="submit-to-google-sheet">
+					<span class="login100-form-title p-b-59">
+						String Theory Registration
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Band Name is required">
+						<span class="label-input100" >Band Name</span>
+						<input class="input100" id="bd" type="text" name="Band Name" placeholder="Band Name">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Representative Name is required">
+						<span class="label-input100">Band representative name</span>
+						<input class="input100" id="brn" type="text" name="Band Representative Name" placeholder="Band representative name">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Representative Contact No. is required">
+						<span class="label-input100">Representative contact no.</span>
+						<input class="input100" id="rc" type="text" name="Representative Contact Number" placeholder="Representative contact no.">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<span class="label-input100">Representative email id</span>
+						<input class="input100" id="rei" type="text" name="Representative Email ID" placeholder="Representative email id">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" data-validate="Representative Institute Name is required">
+						<span class="label-input100">Representative Institute Name</span>
+						<input class="input100" id="rin" type="text" name="Representative Institute Name" placeholder="Representative Institute Name">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Member 2 Name and Email Address is required">
+						<span class="label-input100">Member 2</span>
+						<input class="input100" id="2" type="text" name="Member 2 Name" placeholder="Name">
+						<input class="input100" type="text" name="Member 2 Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Member 3 Name and Email Address is required">
+						<span class="label-input100">Member 3</span>
+						<input class="input100" id="3" type="text" name="Member 3 Name" placeholder="Name">
+						<input class="input100" type="text" name="Member 3 Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<span class="label-input100">Member 4</span>
+						<input class="input100" type="text" name="Member 4 Name" placeholder="Name">
+						<input class="input100" type="text" name="Member 4 Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<span class="label-input100">Member 5</span>
+						<input class="input100" type="text" name="Member 5 Name" placeholder="Name">
+						<input class="input100" type="text" name="Member 5 Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<span class="label-input100">Member 6</span>
+						<input class="input100" type="text" name="Member 6 Name" placeholder="Name">
+						<input class="input100" type="text" name="Member 6 Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<span class="label-input100">Member 7</span>
+						<input class="input100" type="text" name="Member 7 Name" placeholder="Name">
+						<input class="input100" type="text" name="Member 7 Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<span class="label-input100">Member 8</span>
+						<input class="input100" type="text" name="Member 8 Name" placeholder="Name">
+						<input class="input100" type="text" name="Member 8 Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+				
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							
+							<button class="login100-form-btn" type="submit" id="submit_button"  onclick="valid()" >
+								CLICK TO UPLOAD FILES
+							</button>
+						</div>
+					</div>
+				</form>
+				
+		
+
+				<script>
+					function valid(){
+						if(document.getElementById("bd").value==""||document.getElementById("brn").value==""||document.getElementById("rc").value==""||document.getElementById("rei").value==""||document.getElementById("rin").value==""||document.getElementById("2").value==""||document.getElementById("3").value==""){
+							alert("Fill all the required fields!!");
+						}
+						else{
+							const scriptURL = 'https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbwyduDA2iFpEXEqkd-WeMM-aWr1n3YCLz3cxIPP/exec'
+							const form = document.forms['submit-to-google-sheet']
+							form.addEventListener('submit', e => {
+							e.preventDefault()
+							fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+								.then(response => console.log('Success!', response))
+								.catch(error => console.error('Error!', error.message))
+								alert("Your Response is Noted. Click Ok to upload files");
+								window.location.href = 'https://driveuploader.com/upload/2jLgm8gbkn/';
+							})
+						}
+					}
+
+					
+				  </script>
+			</div>
+		</div>
+	</div>
+	<script src="js/main_form.js"></script>
+
+</body>
+</html>

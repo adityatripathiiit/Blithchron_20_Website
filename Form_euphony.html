@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-03.jpg');"></div>
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" 	name="submit-to-google-sheet">
+					<span class="login100-form-title p-b-59">
+						Euphony Registration
+					</span>
+					<div class="wrap-input100 validate-input" data-validate="Participant 1 Name and Email Address is required">
+						<span class="label-input100">Participant</span>
+                        <input class="input100" type="text" name="Participant Name" placeholder="Name">
+                        <input class="input100" type="text" name="Mobile Number" placeholder="Mobile Number">
+						<input class="input100" type="text" name="Email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<span class="label-input100">Accomapanist (optional)</span>
+                        <input class="input100" type="text" name="Accompanist Name" placeholder="Name">
+                        <input class="input100" type="text" name="Mobile Number Accompanist" placeholder="Mobile Number">
+						<input class="input100" type="text" name="Email Accompanist" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Institute name is required">
+						<span class="label-input100">Name of Institute</span>
+                        <input class="input100" type="text" name="Name Of Institute" placeholder="Name">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							
+							<button class="login100-form-btn" type="submit" id="submit_button" onclick="window.location.href = 'https://driveuploader.com/upload/A1MIzeJoly/'" >
+								CLICK TO UPLOAD FILES
+							</button>
+						</div>
+					</div>
+				</form>
+				<script>
+					const scriptURL = 'https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbw2h0cJuwn6yEVDbh5OrnQ-3TnO5P7iBOvbPXxh/exec'
+					const form = document.forms['submit-to-google-sheet']
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+						alert("It is mandatory to upload Music video for audition round, Click Ok to upload files.");	
+					})
+				  </script>
+			</div>
+		</div>
+	</div>
+	<script src="js/main_form.js"></script>
+
+</body>
+</html>

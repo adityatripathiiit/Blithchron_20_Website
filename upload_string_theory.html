@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				
+					<span class="login100-form-title p-b-59">
+						String Theory Registration
+					</span>
+				
+
+					<div class="wrap-input100 validate-input" data-validate="ID proof is required" id="id">
+						<span class="label-input100">1) Upload ID proof of the Band representative</span><br>
+						<span class="label-input100">2) Video of Performance 3-5 Minutes (No editing)</span><br>
+						<span class="label-input100">3) Optional Video Live Performance</span><br>
+						<span class="label-input100">Upload All of the above in Single a zipped file</span>
+						<span class="focus-input100"></span>
+						<span class="focus-input100"></span>
+						<form action="https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbxMVw4_xoDbfPsW5KrNYxSqTFf4-JwfsANj_xm_/exec" id="form" method="post">
+							Upload a file
+							<div id="data"></div>
+							<input name="file" id="uploadfile" type="file">
+							<input id="submit" type="submit">
+						</form>
+						<script>
+						$('#uploadfile').on("change", function() {
+							var file = this.files[0];
+							var fr = new FileReader();
+							fr.fileName = file.name;
+							fr.onload = function(e) {
+								e.target.result
+								html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+								html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+								html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+								$("#data").empty().append(html);
+							}
+							fr.readAsDataURL(file);
+						});
+						</script>
+						
+						<span class="focus-input100"></span>
+					</div>
+
+	
+
+				<script>
+					const scriptURL = 'https://script.google.com/macros/s/AKfycbwDVjhPm4buXYubfd-QcwkBRC9VaYMrKUC1T-EIf3ZJKCyl7Io/exec	'
+					const form = document.forms['submit-to-google-sheet']
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+					})
+				  </script>
+			</div>
+		</div>
+	</div>
+	<script src="js/main_form.js"></script>
+
+</body>
+</html>

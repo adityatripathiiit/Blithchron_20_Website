@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-11.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" 	name="submit-to-google-sheet">
+					<span class="login100-form-title p-b-59">
+                        BlithMUN Registration
+                            
+                    </span>
+                    
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100" >Full Name</span>
+						<input class="input100" type="text" name="Full Name" placeholder="Name">
+						<span class="focus-input100"></span>
+                    </div>
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<span class="label-input100" >Email ID</span>
+						<input class="input100" type="text" name="Email ID" placeholder="Email ID">
+						<span class="focus-input100"></span>
+                    </div>		
+                    		       
+					<div class="wrap-input100 validate-input" data-validate="Institute Name is required">
+                            <span class="label-input100" >Institute Name</span>
+                            <input class="input100" type="text" name="Institute Name" placeholder="Institute Name">
+                            <span class="focus-input100"></span>
+                        </div>                                          
+                    
+					<div class="wrap-input100 validate-input" data-validate="Contact Number is required">
+						<span class="label-input100" >Contact Number</span>
+						<input class="input100" type="text" name="Contact Number" placeholder="Contact Number">
+						<span class="focus-input100"></span>
+					</div>                             
+					<div class="wrap-input100 validate-input" data-validate="Name is required" >
+						<span class="label-input100" >Have you ever been to a MUN before? </span>
+						<input class="input100" type="text" name="Have you ever been to a MUN before?" placeholder="Yes/No">
+						<span class="focus-input100"></span>
+                    </div>			
+					<div class="wrap-input100" >
+                            <span class="label-input100" >How many MUNs have you attended? </span>
+                            <input class="input100" type="text" name="How many MUNs have you attended?" placeholder="Your Answer">
+                            <span class="focus-input100"></span>
+                        </div>			                    
+					<div class="wrap-input100">
+						<span class="label-input100" >Awards received in any MUNs (if any)</span>
+						<input class="input100" type="text" name="Awards received in any MUNs (if any)" placeholder="Your Answer">
+						<span class="focus-input100"></span>
+                    </div>	
+	                    
+					<div class="wrap-input100 validate-input" data-validate="Required">
+						<span class="label-input100" >Committee Preference:</span>
+						<input class="input100" type="text" name="Committee Preference:" placeholder="UN-HRC/UN-DISEC">
+						<span class="focus-input100"></span>
+					</div>		
+					<div class="wrap-input100">
+						<span class="label-input100" >Country preference (if any)</span>
+						<input class="input100" type="text" name="Country preference (if any)" placeholder="Your Answer">
+						<span class="focus-input100"></span>
+                    </div>	
+					<div class="wrap-input100 validate-input" data-validate="Required">
+                            <span class="label-input100" >Do you need accommodation?
+                                <h6>Participants applying for accommodation will have to pay extra ₹375 per day (24 hours) of their stay. Participants may need to share rooms with other participants (accommodation fee will remain the same per person).</h6>
+                            </span>
+                            <input class="input100" type="text" name="Do you need accommodation?" placeholder="Yes/No">
+                            <span class="focus-input100"></span>
+                        </div>                    
+					<div class="wrap-input100 validate-input" data-validate="Required">
+						<span class="label-input100" >How did you came to know about us?</span>
+						<input class="input100" type="text" name="How did you came to know about us?" placeholder="Your Answer">
+						<span class="focus-input100"></span>
+					</div>	
+
+     
+					<div class="wrap-input100 validate-input" data-validate="Required">
+						<span class="label-input100" >Do you have any queries?</span>
+						<input class="input100" type="text" name="Do you have have any queries?" placeholder="Your Answer">
+						<span class="focus-input100"></span>
+                    </div>                                   	                    
+													
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							
+                            <button class="login100-form-btn" type="submit" id="submit_button"   onclick="window.location.href = 'thank_you.html'"  >
+                          
+								SUBMIT
+							</button>
+						</div>
+					</div>
+				</form>
+				
+		
+
+				<script>
+					const scriptURL = 'https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbyphcqc5wW48--DgjTjTuyKCPg4wrPPkYUh1rfC/exec'
+					const form = document.forms['submit-to-google-sheet']
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+						alert("Your Response is Noted. Click Ok")
+					})
+					
+				  </script>
+			</div>
+		</div>
+	</div>
+	<script src="js/main_form.js"></script>
+
+</body>
+</html>

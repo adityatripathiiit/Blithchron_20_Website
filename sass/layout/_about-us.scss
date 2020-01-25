@@ -1,0 +1,22 @@
+.about-us{
+    margin-top: 5rem;
+
+    &__heading{
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 6rem;
+    }
+    
+    
+    &__description{
+        height: 31.5rem;
+        font-size: 2rem;
+        position: relative;
+        @include desktop-respond(md){
+            text-align: center; }
+    }
+    
+    &__description-text{
+        margin: 6.5rem 0.5rem;
+    }
+}

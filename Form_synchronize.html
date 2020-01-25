@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-04.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" 	name="submit-to-google-sheet">
+					<span class="login100-form-title p-b-59">
+						Synchronize Registration
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Team Name is required">
+						<span class="label-input100" >Team Name</span>
+						<input class="input100" id="g" type="text" name="Team Name" placeholder="Team Name...">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Video Link is required">
+						<span class="label-input100">Video Link</span>
+						<input class="input100" id="f" type="text" name="Video Link" placeholder="Video Link">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Team Leader Name is required">
+						<span class="label-input100">Team Leader Name</span>
+						<input class="input100" id="e" type="text" name="Team Leader Name" placeholder="Team Leader Name">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<span class="label-input100">Email ID</span>
+						<input class="input100" id="d" type="text" name="Email ID" placeholder="Email ID">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Mobile Number is required">
+						<span class="label-input100">Mobile Number</span>
+						<input class="input100" id="c" type="text" name="Mobile Number " placeholder="Mobile Number">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="College Name is required">
+						<span class="label-input100">College Name</span>
+						<input class="input100" id="a" type="text" name="College" placeholder="Team Leader Name">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" data-validate="Residential or studying place Name is required">
+						<span class="label-input100">Residential or studying place</span>
+						<input class="input100" id="b" type="text" name="Residential or studying place" placeholder="Residential or studying place">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Residential or studying place Name is required">
+						<span class="label-input100">Age of Team Leader</span>
+						<input class="input100" id="l" type="text" name="Age" placeholder="Age">
+						<span class="focus-input100"></span>
+					</div>				
+					<div class="wrap-input100">
+						<span class="label-input100">Team Members</span>
+						<input class="input100" type="text" name="Member 2 Name" placeholder="Member 2 Name">
+						<input class="input100" type="text" name="Member 3 Name" placeholder="Member 3 Name">
+						<input class="input100" type="text" name="Member 4 Name" placeholder="Member 4 Name">
+						<input class="input100" type="text" name="Member 5 Name" placeholder="Member 5 Name">
+						<input class="input100" type="text" name="Member 6 Name" placeholder="Member 6 Name">
+						<input class="input100" type="text" name="Member 7 Name" placeholder="Member 7 Name">
+						<input class="input100" type="text" name="Member 8 Name" placeholder="Member 8 Name">
+						<input class="input100" type="text" name="Member 9 Name" placeholder="Member 9 Name">
+						<input class="input100" type="text" name="Member 10 Name" placeholder="Member 10 Name">
+						<input class="input100" type="text" name="Member 11 Name" placeholder="Member 11 Name">
+						<input class="input100" type="text" name="Member 12 Name" placeholder="Member 12 Name">
+						<input class="input100" type="text" name="Member 13 Name" placeholder="Member 13 Name">
+						<input class="input100" type="text" name="Member 14 Name" placeholder="Member 14 Name">
+						<input class="input100" type="text" name="Member 15 Name" placeholder="Member 15 Name">
+						<input class="input100" type="text" name="Member 16 Name" placeholder="Member 16 Name">
+						<input class="input100" type="text" name="Member 17 Name" placeholder="Member 17 Name">
+						<input class="input100" type="text" name="Member 18 Name" placeholder="Member 18 Name">
+						<input class="input100" type="text" name="Member 19 Name" placeholder="Member 19 Name">
+						<input class="input100" type="text" name="Member 20 Name" placeholder="Member 20 Name">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" type="submit" id="submit_button" onclick="valid()">
+								SUBMIT
+							</button>
+						</div>
+					</div>
+				</form>
+				
+		
+
+				<script>
+					function valid(){
+						if(document.getElementById('g').value==""||document.getElementById('f').value==""||document.getElementById('e').value==""||document.getElementById('d').value==""||document.getElementById('c').value==""||document.getElementById('b').value==""||document.getElementById('a').value==""||document.getElementById('l').value==""){
+							alert("fill all the required fields!!!");
+						}
+						else{
+							const scriptURL = 'https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbztrH7qTgChDwmQdnJudSWZ0OryJYQV47pnYxbk/exec'
+							const form = document.forms['submit-to-google-sheet']
+							form.addEventListener('submit', e => {
+							e.preventDefault()
+							fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+								.then(response => console.log('Success!', response))
+								.catch(error => console.error('Error!', error.message))
+								alert("Your Response is Noted. Click Ok")
+								window.location.href = 'thank_you.html'
+							})
+						}
+					}
+					
+					
+				  </script>
+			</div>
+		</div>
+	</div>
+	<script src="js/main_form.js"></script>
+
+</body>
+</html>

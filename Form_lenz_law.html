@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-05.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" 	name="submit-to-google-sheet">
+					<span class="login100-form-title p-b-59">
+						Lenz Law Registration
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Member 1 INFO is required">
+						<span class="label-input100">Member 1</span>
+						<input class="input100" type="text" name="Member 1 Name" placeholder="Name">
+						<input class="input100" type="text" name="Mobile Number Member 1" placeholder="Mobile Number">
+						<input class="input100" type="text" name="College Member 1" placeholder=" College Name">
+						<input class="input100" type="text" name="Email ID Member 1" placeholder="Email ID">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Member 2 INFO is required">
+						<span class="label-input100">Member 2</span>
+						<input class="input100" type="text" name="Member 2 Name" placeholder="Name">
+						<input class="input100" type="text" name="Mobile Number Member 2" placeholder="Mobile Number">
+						<input class="input100" type="text" name="College Member 2" placeholder=" College Name">
+						<input class="input100" type="text" name="Email ID Member 2" placeholder="Email ID">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							
+							<button class="login100-form-btn" type="submit" id="submit_button">
+								SUBMIT
+							</button>
+						</div>
+					</div>
+				</form>
+				
+		
+
+				<script>
+					const scriptURL = 'https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbyUquIGwtVnX_G0qlxmWmyGHdgA8H6PjQC8kAyvnQ/exec'
+					const form = document.forms['submit-to-google-sheet']
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+						
+						alert("Your response is recorded, click OK")
+						window.location.href = 'thank_you.html'
+					})
+					
+				  </script>
+			</div>
+		</div>
+	</div>
+	<script src="js/main_form.js"></script>
+
+</body>
+</html>

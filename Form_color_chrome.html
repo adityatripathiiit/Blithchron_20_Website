@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-08.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" 	name="submit-to-google-sheet">
+					<span class="login100-form-title p-b-59">
+						Color Chrome Registration
+					</span>
+					<div class="wrap-input100 validate-input" data-validate="Member 1 Name, Email Address and contact number is required">
+						<span class="label-input100">Member 1</span>
+						<input class="input100" type="text" name="Member 1 Name" placeholder="Name">
+                        <input class="input100" type="text" name="Member 1 Email" placeholder="Email Address">
+                        <input class="input100" type="text" name="Member 1 Mobile Number" placeholder="Mobile Number">
+                        <input class="input100" type="text" name="College Member 1" placeholder="College Name">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Member 2 Name, Email Address and contact number is required">
+						<span class="label-input100">Member 2</span>
+						<input class="input100" type="text" name="Member 2 Name" placeholder="Name">
+                        <input class="input100" type="text" name="Member 2 Email" placeholder="Email Address">
+                        <input class="input100" type="text" name="Member 2 Mobile Number" placeholder="Mobile Number">
+                        <input class="input100" type="text" name="College Member 2" placeholder="College Name">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100">
+						<span class="label-input100">Member 3</span>
+						<input class="input100" type="text" name="Member 3 Name" placeholder="Name">
+                        <input class="input100" type="text" name="Member 3 Email" placeholder="Email Address">
+                        <input class="input100" type="text" name="Member 3 Mobile Number" placeholder="Mobile Number">
+                        <input class="input100" type="text" name="College Member 3" placeholder="College Name">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Transaction ID is required">
+						<span class="label-input100" >Transaction ID (Non IITGN Students)</span>
+						<input class="input100" type="text" name="Transaction ID (Non IITGN)" placeholder="Transaction ID">
+						<span class="focus-input100"></span>
+					</div>				
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							
+                            <button class="login100-form-btn" type="submit" id="submit_button"   onclick="window.location.href = 'https://driveuploader.com/upload/KnFkDZkdi0/'"  >
+                          
+                                CLICK NEXT AND UPLOAD SCREENSHOT OF THE TRANSFER OF REGISTRATION FEES
+                                
+							</button>
+						</div>
+					</div>
+				</form>
+				<script>
+					const scriptURL = 'https://script.google.com/a/iitgn.ac.in/macros/s/AKfycbzv1zhL9KQW6fQzIxJxDcmx75t1DI4mxLlkC65FMQ/exec'
+					const form = document.forms['submit-to-google-sheet']
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+						alert("Your Response is Noted. Click Ok")
+					})
+					
+				  </script>
+			</div>
+		</div>
+	</div>
+	<script src="js/main_form.js"></script>
+
+</body>
+</html>
