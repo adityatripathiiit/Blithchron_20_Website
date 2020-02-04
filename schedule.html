@@ -436,7 +436,7 @@
                 <path class="shape-overlays__path"></path>
             </svg>
     </div>
-    <p> a</p>
+    <p style="padding-bottom:20vw"> </p>
     <div id="canvas"></div>
 
 <div id="content">
@@ -445,6 +445,26 @@
 
     <!-- drag slider -->
     <div id="planes">
+
+        <div class="plane-wrapper">
+            <span class="plane-title">EDM</span>
+            <div class="plane">
+                <img src="img/edm.png" data-sampler="planeTexture">
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">DAY-2</span>
+            <div class="plane">
+                <img src="img/day2.png" data-sampler="planeTexture">
+            </div>
+        </div>
+        <div class="plane-wrapper">
+            <span class="plane-title">DAY-1</span>
+            <div class="plane" style = 'max-width: 100%;max-height: 100%'>
+                <img src="img/day1.png" data-sampler="planeTexture">
+            </div>
+        </div>
 
         <div class="plane-wrapper">
             <span class="plane-title">Yellow Diary</span>
@@ -515,7 +535,7 @@
     </div>
 
 
-</div>
+</div> <p style="padding-top:20vw"> </p>
 
 <script id="slider-planes-vs" type="x-shader/x-vertex">
     #ifdef GL_ES
@@ -699,28 +719,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
 <script src='https://www.curtainsjs.com/build/curtains.min.js'></script>
 
-     <div class="footer_bot" id="footer_bot-id" style="display: block;">
-        <div class="container_bot">                      
-            <div class="footerSpan_bot" style="margin:0px 5px;">                                        
-                <div class="col-md-4" style="font-size: 20px; padding: 0px 0px;">                    
-                    <a href="Blith-20.apk" class="blink2">                            
-                        Download the BLITHCHRON App&nbsp;&nbsp;                    
-                    </a>
-                </div>
-                <div class="col-md-7" style="font-size: 20px; text-align: left;">
-                    <div style="padding:5px 0px;">                                                   
-                        <a href="schedule.html"><span class="blink">Daily Updates</span>
-                        <img src="img/calendar.png" class="bottom"></a>
-                        <a href="campus.html"><span class="blink">Be a CA</span>
-                        <img src="img/man1.png" class="bottom"></a>
-                        &nbsp;&nbsp;<a href="#"><span  class="blink">Map</span>
-                        <img src="img/map.png" class="bottom"></a>                                          
-                    </div>                    
-                </div>                
-            </div>
-        </div>
-    </div>  
-
+    
     <!-- <nav class="navigation" id="vanta-background">
         <ul class="navigation__list">
             <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
@@ -848,7 +847,12 @@
 
             // find the amount of "seconds" between now and target
             var current_date = new Date().getTime();
-            var seconds_left = (target_date - current_date) / 1000;
+            if ((target_date - current_date)/ 1000 != 0){
+                var seconds_left = (target_date - current_date) / 1000;}
+
+            else{
+                var seconds_left = target_date - target_date
+            }
 
             days = pad(parseInt(seconds_left / (3600*24)));
             seconds_left = seconds_left - days*(3600*24);
@@ -859,6 +863,8 @@
             minutes = pad(parseInt(seconds_left / 60)%60);
             seconds_left = seconds_left - minutes*60;
             seconds = pad(parseInt(seconds_left % 60));
+                    
+ 
 
             // format countdown string + set tag value
             countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";

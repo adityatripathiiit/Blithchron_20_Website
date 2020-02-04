@@ -35,7 +35,26 @@
     <link rel="stylesheet" type="text/css" href="vendor/countdowntime/flipclock.css">
 
 
+<style>
 
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+ from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+</style>
     <style type="text/css">
         #shimmer {
             background: linear-gradient(270deg, #FF595E, #141B41, #403F4C, #26547C, #241623);
@@ -510,7 +529,7 @@
                         <img src="img/calendar.png" class="bottom"></a>
                         <a href="campus.html"><span class="blink">Be a CA</span>
                         <img src="img/man1.png" class="bottom"></a>
-                        &nbsp;&nbsp;<a href="#"><span  class="blink">Map</span>
+                        &nbsp;&nbsp;<a href="map.html"><span  class="blink">Map</span>
                         <img src="img/map.png" class="bottom"></a>                                          
                     </div>                    
                 </div>                
@@ -527,8 +546,8 @@
 
     <div class="p-l-15 p-r-15 container" id="count_mob" style="size: 80px;">
         <div class="flex-col-c p-t-160 p-b-215 respon1">
-            <h1 style="padding-top:15rem; margin-top: 54rem; text-align: center; color: white;font-size: 80px; font-family: 'Staatliches', cursive;">
-                Coming Soon
+            <h1 class= 'glow' style="padding-top:15rem; margin-top: 54rem; text-align: center; color: white;font-size: 80px; font-family: 'Staatliches', cursive;">
+                IS ONN!!
             </h1>
             <!-- Desktop view clock -->
             <div class="nav_desktop">
@@ -1579,22 +1598,28 @@
 
             // find the amount of "seconds" between now and target
             var current_date = new Date().getTime();
-            var seconds_left = (target_date - current_date) / 1000;
+            if ((target_date - current_date)/ 1000 >= 0){
+                var seconds_left = 0}
 
-            days = pad(parseInt(seconds_left / (3600 * 24)));
-            seconds_left = seconds_left - days * (3600 * 24);
+            else{
+                var seconds_left = target_date - target_date
+            }
 
-            hours = pad(parseInt(seconds_left / 3600) % 24);
-            seconds_left = seconds_left - hours * 3600;
-
-            minutes = pad(parseInt(seconds_left / 60) % 60);
-            seconds_left = seconds_left - minutes * 60;
+            days = pad(parseInt(seconds_left / (3600*24)));
+            seconds_left = seconds_left - days*(3600*24);
+            
+            hours = pad(parseInt(seconds_left / 3600)%24);
+            seconds_left = seconds_left - hours*3600;
+            
+            minutes = pad(parseInt(seconds_left / 60)%60);
+            seconds_left = seconds_left - minutes*60;
             seconds = pad(parseInt(seconds_left % 60));
+                    
+ 
 
             // format countdown string + set tag value
             countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
         }
-
 
         function pad(n) {
             return (n < 10 ? '0' : '') + n;

@@ -20,6 +20,7 @@
           var obj = $(this);
           var timeNow = new Date();
 
+
           var tZ = options.timeZone; console.log(tZ);
           var endYear = options.endtimeYear;
           var endMonth = options.endtimeMonth;
@@ -39,12 +40,20 @@
             var deadline = new Date(Date.parse(new Date()) + endDate * 24 * 60 * 60 * 1000 + endHours * 60 * 60 * 1000); 
           }
           
-          var t = Date.parse(deadline) - Date.parse(new Date());
+          
+          if(Date.parse(deadline) - Date.parse(new Date()) <= 0){
+            var t = 0;  
+          }
+          else{
+            var t = 0;  
+          }
             
           var clock = $(obj).FlipClock(t/1000, {
             clockFace: 'DailyCounter',
             countdown: true
           });
+
+
 
 
         });

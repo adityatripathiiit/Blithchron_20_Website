@@ -68,7 +68,7 @@
     .plane-wrapper {
         position: relative;
         max-width: 100%;
-        width: calc(100vw / 1.5);
+        width: calc(100vw / 2.1);
         height: 100vh;
         margin: auto 5vw;
         text-align: center;
@@ -200,7 +200,7 @@
     .plane-wrapper {
         position: relative;
         width: 90vw;
-        height: calc(100vh /3.4);
+        height: calc(100vh /2.4);
         margin: 5vw 0;
     }
 

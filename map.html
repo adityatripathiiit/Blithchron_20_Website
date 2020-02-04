@@ -9,27 +9,25 @@
     <!-- Animate.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
-
+    
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     <!-- Fontawesome personal kit -->
-    <script src="https://kit.fontawesome.com/38fff33c34.js"></script>
+    
     <!-- Custom CSS and icon -->
-    <link rel="stylesheet" href="css/pronites_helper.css">
-    <link rel="stylesheet" type="text/css" href="css/header_helper.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <script type="text/javascript" src="js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="css/video_helper.css">
+    
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/countdowntime/flipclock.css">
+    
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/nav_helper.css">
     <link rel="stylesheet" type="text/css" href="css/nav_mobile_helper.css">
+    <link rel="stylesheet" type="text/css" href="css/new_map.css">
     <style>
     	#aws{
     	-webkit-animation:colorchange 7s infinite alternate;
@@ -141,26 +139,6 @@
             }
         }
     </style>
-    <style>
-
-.glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
- from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
-  }
-}
-</style>
     <title>Blithchron'20 | The Annual Cultural Fest of IIT Gandhinagar </title>
 </head>
 
@@ -344,7 +322,7 @@
     </div>
     <!-- LOGO SMALL AND BIG -->
     <a href="index.html"> <img src="img/logo_small.png" class="logo_small"> </a>
-    <a href="index.html"> <img src="img/logo_big.png" class="logo_big" style="display: none;"> </a>
+    
     <!-- DESKTOP Navigation BAR -->
     <div class="nav_desktop">
         <div class="overlay">
@@ -458,6 +436,311 @@
                 <path class="shape-overlays__path"></path>
             </svg>
     </div>
+ <p style="padding-bottom:20vw"> </p>
+    <div id="canvas"></div>
+
+<div id="content">
+
+    <h1 id="title">BUS SCHEDULE</h1>
+
+    <!-- drag slider -->
+    <div id="planes">
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Route-1</span>
+            <div class="plane">
+                <img src="img/map1.jpeg" data-sampler="planeTexture">
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Route-2</span>
+            <div class="plane">
+                <img src="img/map2.png" data-sampler="planeTexture">
+            </div>
+        </div>
+        <div class="plane-wrapper">
+            <span class="plane-title">Route-3</span>
+            <div class="plane">
+                <img src="img/map3.png" data-sampler="planeTexture">
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Route-4</span>
+            <div class="plane">
+                <img src="img/map4.png" data-sampler="planeTexture">
+            </div>
+        </div>
+        <!-- <div class="plane-wrapper">
+            <span class="plane-title">Synchronize</span>
+            <div class="plane">
+                <img src="img/syn.jpg" data-sampler="planeTexture">
+            </div>
+        </div> -->
+
+        <!-- <div class="plane-wrapper">
+            <span class="plane-title">Chicago</span>
+            <div class="plane">
+                <img src="https://source.unsplash.com/waedcXSIAKk/1280x720" data-sampler="planeTexture" alt="Photo by Pedro Lastra on Unsplash" crossorigin />
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Shanghai</span>
+            <div class="plane">
+                <img src="https://source.unsplash.com/D8iZPlX-2fs/1280x720" data-sampler="planeTexture" alt="Photo by Denys Nevozhai on Unsplash" crossorigin />
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">New York</span>
+            <div class="plane">
+                <img src="https://source.unsplash.com/y9WmMWaiftc/1280x720" data-sampler="planeTexture" alt="Photo by Pedro Lastra on Unsplash" crossorigin />
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Tokyo</span>
+            <div class="plane">
+                <img src="https://source.unsplash.com/IocJwyqRv3M/1280x720" data-sampler="planeTexture" alt="Photo by Louie Martinez on Unsplash" crossorigin />
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Singapore</span>
+            <div class="plane">
+                <img src="https://source.unsplash.com/6wvbIX02V9M/1280x720" data-sampler="planeTexture" alt="Photo by Sonali Sharma on Unsplash" crossorigin />
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Toronto</span>
+            <div class="plane">
+                <img src="https://source.unsplash.com/451DMKNITAM/1280x720" data-sampler="planeTexture" alt="Photo by Syed Ahmed on Unsplash" crossorigin />
+            </div>
+        </div>
+
+        <div class="plane-wrapper">
+            <span class="plane-title">Kuala Lumpur</span>
+            <div class="plane">
+                <img src="https://source.unsplash.com/a1TnJHVCGN0/1280x720" data-sampler="planeTexture" alt="Photo by Azlan Baharudin on Unsplash" crossorigin />
+            </div>
+        </div> -->
+
+    </div>
+
+    <div id="drag-tip">
+        Drag to explore
+    </div>
+
+
+</div>
+ <p style="padding-bottom:20vw"> </p>
+
+<script id="slider-planes-vs" type="x-shader/x-vertex">
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+
+    // default mandatory attributes
+    attribute vec3 aVertexPosition;
+    attribute vec2 aTextureCoord;
+
+    // those projection and model view matrices are generated by the library
+    // it will position and size our plane based on its HTML element CSS values
+    uniform mat4 uMVMatrix;
+    uniform mat4 uPMatrix;
+
+    // this is generated by the library based on the sampler name we provided
+    // it will be used to map adjust our texture coords so the texture will fit the plane
+    uniform mat4 planeTextureMatrix;
+
+    // texture coord varying that will be passed to our fragment shader
+    varying vec2 vTextureCoord;
+
+    void main() {
+        // apply our vertex position based on the projection and model view matrices
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+
+        // varying
+        // use texture matrix and original texture coords to generate accurate texture coords
+        vTextureCoord = (planeTextureMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;
+    }
+</script>
+<script id="slider-planes-fs" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+
+    // our texture coords varying
+    varying vec2 vTextureCoord;
+
+    // our texture sampler (see how its name matches the data-sampler attribute on our image tags)
+    uniform sampler2D planeTexture;
+    // our opacity uniform that goes from 0 to 1
+    uniform float uOpacity;
+
+    void main( void ) {
+        // map our texture to the varying texture coords
+        vec4 finalColor = texture2D(planeTexture, vTextureCoord);
+
+        // the distance from this point to the top edge is a float from 0 to 1
+        float distanceToTop = distance(vec2(vTextureCoord.x, 1.0), vTextureCoord);
+
+        // calculate an effect that goes from 0 to 1 depenging on uOpacity and distanceToTop
+        float spreadFromTop = clamp((uOpacity * (1.0 - distanceToTop) - 1.0) + uOpacity * 2.0, 0.0, 1.0);
+
+        // handle pre-multiplied alpha on rgb values and use spreadFromTop as alpha.
+        finalColor = vec4(vec3(finalColor.rgb * spreadFromTop), spreadFromTop);
+
+        // this is it
+        gl_FragColor = finalColor;
+    }
+</script>
+
+
+<script id="distortion-vs" type="x-shader/x-vertex">
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+
+    // default mandatory attributes
+    attribute vec3 aVertexPosition;
+    attribute vec2 aTextureCoord;
+
+    // our displacement texture matrix uniform
+    uniform mat4 displacementTextureMatrix;
+
+    // mouse position and direction uniforms
+    uniform vec2 uMousePos;
+    uniform float uDirection;
+
+    // custom varyings
+    varying vec2 vTextureCoord;
+    varying vec2 vDispTextureCoord;
+    varying vec2 vMouseTexCoords;
+
+    void main() {
+        gl_Position = vec4(aVertexPosition, 1.0);
+
+        // varyings
+        vTextureCoord = aTextureCoord;
+        vDispTextureCoord = (displacementTextureMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;
+
+        // we will handle our mouse coords here for better performance
+        // get our texture coords for both directions
+        vec2 mouseHorizontalTexCoords = (uMousePos + 1.0) / 2.0;
+        mouseHorizontalTexCoords.y = 0.5;
+
+        vec2 mouseVerticalTexCoords = (uMousePos + 1.0) / 2.0;
+        mouseVerticalTexCoords.x = 0.5;
+
+        // use the right value for the right direction
+        vMouseTexCoords = mix(mouseHorizontalTexCoords, mouseVerticalTexCoords, uDirection);
+    }
+</script>
+<script id="distortion-fs" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+
+    // varyings
+    varying vec2 vTextureCoord;
+    varying vec2 vDispTextureCoord;
+    varying vec2 vMouseTexCoords;
+
+    // our render texture is basically what's being drawn in our canvas
+    uniform sampler2D renderTexture;
+    // the displacement texture we've loaded into our shader pass
+    uniform sampler2D displacementTexture;
+
+    // all our uniforms
+    uniform float uDragEffect;
+    uniform vec2 uMousePos;
+    uniform vec2 uOffset;
+    uniform float uDirection;
+    uniform vec3 uBgColor;
+
+    void main( void ) {
+        vec2 textureCoords = vTextureCoord;
+
+        // repeat and offset our displacement map texture coords for both slider directions
+        vec2 horizontalPhase = fract(vec2(vDispTextureCoord.x + uOffset.x, vDispTextureCoord.y + (uOffset.y / 3600.0)) / vec2(1.0, 1.0));
+        vec2 verticalPhase = fract(vec2(vDispTextureCoord.x * (uOffset.x / 3600.0), vDispTextureCoord.y + uOffset.y) / vec2(1.0, 1.0));
+
+        // use the correct repeated and offseted texture coords
+        vec2 phase = mix(horizontalPhase, verticalPhase, uDirection);
+        vec4 displacement = texture2D(displacementTexture, phase);
+
+        // use our varying mouse texture coords
+        vec2 mouseTexCoords = vMouseTexCoords;
+
+        float distanceToMouse = distance(mouseTexCoords, textureCoords);
+
+        // calculate an effect that goes from 0 to 1 depenging on uDragEffect and distanceToMouse
+        float spreadFromMouse = clamp((uDragEffect * (1.0 - distanceToMouse) - 1.0) + uDragEffect * 2.0, 0.0, 1.0);
+
+        // calculate our fish eye like distortions
+        vec2 fishEye = (vec2(textureCoords - mouseTexCoords).xy) * pow(distanceToMouse, 3.0);
+
+        // add a displacement based on our map and our time uniform
+        float displacementEffect = displacement.r * 1.25;
+
+        // spread our fish eye and displacement effects from our mouse
+        // calculate for both directions
+        vec2 horizontalTexCoords = textureCoords;
+        horizontalTexCoords.x -= spreadFromMouse * fishEye.x * displacementEffect / 2.0;
+        horizontalTexCoords.y += spreadFromMouse * fishEye.y * displacementEffect * 3.0;
+
+        vec2 verticalTexCoords = textureCoords;
+        verticalTexCoords.x += spreadFromMouse * fishEye.x * displacementEffect * 3.0;
+        verticalTexCoords.y -= spreadFromMouse * fishEye.y * displacementEffect / 2.0;
+
+        // use the right value for the right direction
+        textureCoords = mix(horizontalTexCoords, verticalTexCoords, uDirection);
+
+
+        // get our final colored and BW vec4
+        vec4 finalColor = texture2D(renderTexture, textureCoords);
+        float grey = dot(finalColor.rgb, vec3(0.299, 0.587, 0.114));
+        vec4 finalGrey = vec4(vec3(grey), 1.0);
+
+        // mix our both vec4 based on our spread value
+        finalColor = mix(finalColor, finalGrey, spreadFromMouse * finalColor.a);
+
+        float spreadFromMouseAdjusted = spreadFromMouse / sqrt(2.0);
+
+        // apply a grey background where we don't have nothing to draw
+        finalColor = mix(vec4(uBgColor.r * spreadFromMouseAdjusted / 255.0, uBgColor.g * spreadFromMouseAdjusted / 255.0, uBgColor.b * spreadFromMouseAdjusted / 255.0, spreadFromMouseAdjusted), finalColor, finalColor.a);
+
+        gl_FragColor = finalColor;
+    }
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+<script src='https://www.curtainsjs.com/build/curtains.min.js'></script>
+
+     <!-- <div class="footer_bot" id="footer_bot-id" style="display: block;">
+        <div class="container_bot">                      
+            <div class="footerSpan_bot" style="margin:0px 5px;">                                        
+                <div class="col-md-4" style="font-size: 20px; padding: 0px 0px;">                    
+                    <a href="Blith-20.apk" class="blink2">                            
+                        Download the BLITHCHRON App&nbsp;&nbsp;                    
+                    </a>
+                </div>
+                <div class="col-md-7" style="font-size: 20px; text-align: left;">
+                    <div style="padding:5px 0px;">                                                   
+                        <a href="schedule.html"><span class="blink">Daily Updates</span>
+                        <img src="img/calendar.png" class="bottom"></a>
+                        <a href="campus.html"><span class="blink">Be a CA</span>
+                        <img src="img/man1.png" class="bottom"></a>
+                        &nbsp;&nbsp;<a href="#"><span  class="blink">Map</span>
+                        <img src="img/map.png" class="bottom"></a>                                          
+                    </div>                    
+                </div>                
+            </div>
+        </div>
+    </div>   -->
 
     <!-- <nav class="navigation" id="vanta-background">
         <ul class="navigation__list">
@@ -474,286 +757,12 @@
     <div class="navigation__button">
         <span class="navigation__icon">&nbsp;</span>
     </div> -->
-    <div class="footer_bot" id="footer_bot-id" style="display: block;">
-        <div class="container_bot">                      
-            <div class="footerSpan_bot" style="margin:0px 5px;">                                        
-                <div class="col-md-4" style="font-size: 20px; padding: 0px 0px;">                    
-                    <a href="Blith-20.apk" class="blink2">                            
-                        Download the BLITHCHRON App&nbsp;&nbsp;                    
-                    </a>
-                </div>
-                <div class="col-md-7" style="font-size: 20px; text-align: left;">
-                    <div style="padding:5px 0px;">                                                   
-                    	<a href="schedule.html"><span class="blink">Daily Updates</span>
-                        <img src="img/calendar.png" class="bottom"></a>
-                        <a href="campus.html"><span class="blink">Be a CA</span>
-                        <img src="img/man1.png" class="bottom"></a>
-                        &nbsp;&nbsp;<a href="map.html"><span  class="blink">Map</span>
-                        <img src="img/map.png" class="bottom"></a>                                          
-                    </div>                    
-                </div>                
-            </div>
-        </div>
-    </div>  
-
-    <!-- Header section -->
-    <div id="wowslider-container1">
-
-        <h1 class="pronites-intro__heading heading-secondary-pro" data-shadow='PRONITES' style="transform: rotate(0deg);">PRONITES</h2>
-
-            <div class="ws_images">
-                <ul>
-                    <li><img src="data1/images/dsc_0027.jpg" alt="DSC_0027" title="DSC_0027" id="wows1_0" /></li>
-                    <li><img src="data1/images/dsc_0093.jpg" alt="DSC_0093" title="DSC_0093" id="wows1_1" /></li>
-                    <li><img src="data1/images/dsc_0186.jpg" alt="DSC_0186" title="DSC_0186" id="wows1_2" /></li>
-                    <li><img src="data1/images/dsc_0001.jpg" alt="DSC_0001" title="DSC_0001" id="wows1_3" /></li>
-                    <li><img src="data1/images/img_4306.jpg" alt="IMG_4306" title="IMG_4306" id="wows1_4" /></li>
-                    <li><img src="data1/images/img_4308.jpg" alt="IMG_4308" title="IMG_4308" id="wows1_5" /></li>
-                    <li><img src="data1/images/dsc_0276.jpg" alt="DSC_0276" title="DSC_0276" id="wows1_6" /></li>
-                    <li><img src="data1/images/dsc_0349.jpg" alt="DSC_0349" title="DSC_0349" id="wows1_7" /></li>
-                    <li><img src="data1/images/img_4305.jpg" alt="IMG_4305" title="IMG_4305" id="wows1_9" /></li>
-                </ul>
-            </div>
-            <div class="ws_bullets">
-                <div>
-                    <a href="#" title="DSC_0027"><span><img src="data1/tooltips/dsc_0027.jpg" alt="DSC_0027"/>1</span></a>
-                    <a href="#" title="DSC_0093"><span><img src="data1/tooltips/dsc_0093.jpg" alt="DSC_0093"/>2</span></a>
-                    <a href="#" title="DSC_0186"><span><img src="data1/tooltips/dsc_0186.jpg" alt="DSC_0186"/>3</span></a>
-                    <a href="#" title="DSC_0001"><span><img src="data1/tooltips/dsc_0001.jpg" alt="DSC_0001"/>4</span></a>
-                    <a href="#" title="IMG_4306"><span><img src="data1/tooltips/img_4306.jpg" alt="IMG_4306"/>5</span></a>
-                    <a href="#" title="IMG_4308"><span><img src="data1/tooltips/img_4308.jpg" alt="IMG_4308"/>6</span></a>
-                    <a href="#" title="DSC_0276"><span><img src="data1/tooltips/dsc_0276.jpg" alt="DSC_0276"/>7</span></a>
-                    <a href="#" title="DSC_0349"><span><img src="data1/tooltips/dsc_0349.jpg" alt="DSC_0349"/>8</span></a>
-                    <a href="#" title="IMG_4304"><span><img src="data1/tooltips/img_4304.jpg" alt="IMG_4304"/>9</span></a>
-                    <a href="#" title="IMG_4305"><span><img src="data1/tooltips/img_4305.jpg" alt="IMG_4305"/>10</span></a>
-                </div>
-            </div>
-            <div class="ws_shadow"></div>
-    </div>
-    <main class="highway-container" style="display: none;">
-        <video class="project-item__video" playsinline autoplay loop muted style="position: absolute;height: 90%; width: 100%;object-fit: cover;">
-                        <source src="img/video.mp4" type="video/mp4">
-                    </video>
-    </main>
-
-    <div class="bg-img1 size1 p-b-5 p-l-15 p-r-15" style="size: 80px;">
-        <div class="flex-col-c p-t-160 p-b-215 respon1">
-            <h1  class= 'glow'style="padding-top:15rem;  text-align: center; color: white;font-size: 80px; font-family: 'Staatliches', cursive;">
-                IS ONN!!
-            </h1>
-            <!-- Desktop view clock -->
-            <div class="nav_desktop">
-
-                <div class="cd100 container" style="margin-bottom: -210px; margin-top: 70px;"></div>
-
-            </div>
-            <div class="nav_mobile" style="margin-top:2.9rem; margin-bottom: -14rem;">
-                <div id="countdown">
-                    <div id='tiles'></div>
-                    <div class="labels">
-                        <li>Days</li>
-                        <li>Hours</li>
-                        <li>Mins</li>
-                        <li>Secs</li>
-                    </div>
-                </div>
-                <div style="margin-top: 2rem;">
-                    <span style="color:  #94FB47; margin-left: 2rem; font-size: 11px;">Days</span>
-                    <span style="color:  #94FB47; margin-left: 6.2rem;font-size: 11px;">Hours</span>
-                    <span style="color:  #94FB47; margin-left: 6rem;font-size: 11px;">Minutes</span>
-                    <span style="color:  #94FB47; margin-left: 4rem;font-size: 11px;">Seconds</span>
-                </div>
-            </div>
-
-
-            <!-- Mobile view clock -->
-
-
-        </div>
-    </div>
-    <!--Pronites performers  -->
-    <main>
-        <canvas id="bg-stars" class="bg-stars"> </canvas>
-
-        <section class="Speakers" id="speakers">
-            <div class="skew">
-                <div class="Grid Grid--alignRight">
-                    <div class="Grid-cell u-lg-size10of12">
-                        <div class="Grid Grid--withGutter">
-
-                            <canvas id="canvasAustro" class="austro" width="600" height="640"></canvas>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper" style="transform: translate(calc(2.47357px), calc(-23.061px)) rotate(calc(0.412261deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(./img/speakers/img.png)"></div>
-                                        <h2 class="Speaker-name" style="font-size:26px;" id="aws">The Yellow Diary:2020</h2>
-                                        <h3 class="Speaker-topic">Music Band</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper Speaker--offset" style="transform: translate(calc(-5.13204px), calc(-23.9743px)) rotate(calc(-0.85534deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img5.jpg)"></div>
-                                        <h2 class="Speaker-name">Nucleya</h2>
-                                        <h3 class="Speaker-topic">Musical artist</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper" style="transform: translate(calc(2.47451px), calc(-29.5914px)) rotate(calc(0.412418deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img6.jpg)"></div>
-                                        <h2 class="Speaker-name">Swarathma</h2>
-                                        <h3 class="Speaker-topic">Band</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper Speaker--offset" style="transform: translate(calc(-5.13204px), calc(-31.7684px)) rotate(calc(-0.85534deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img4.jpg)"></div>
-                                        <h2 class="Speaker-name">Pentagram</h2>
-                                        <h3 class="Speaker-topic">Rock Band</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper" style="transform: translate(calc(2.47357px), calc(-38.9551px)) rotate(calc(0.412261deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img7.jpg)"></div>
-                                        <h2 class="Speaker-name">Miss Tara</h2>
-                                        <h3 class="Speaker-topic">DJ</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper Speaker--offset" style="transform: translate(calc(-5.13204px), calc(-39.8684px)) rotate(calc(-0.85534deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img2.jpg)"></div>
-                                        <h2 class="Speaker-name">Kash Trevidi</h2>
-                                        <h3 class="Speaker-topic">Musical Artist</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper" style="transform: translate(calc(2.47357px), calc(-46.7493px)) rotate(calc(0.412261deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img3.jpg)"></div>
-                                        <h2 class="Speaker-name">Lagori</h2>
-                                        <h3 class="Speaker-topic">Rock Band</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper" style="transform: translate(calc(2.47357px), calc(-23.061px)) rotate(calc(0.412261deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img1.jpg)"></div>
-                                        <h2 class="Speaker-name" style="font-size:26px;">Ayushmann Khurrana</h2>
-                                        <h3 class="Speaker-topic">Super Star &amp;Singer, T.V. Host</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper" style="transform: translate(calc(2.47357px), calc(-54.5434px)) rotate(calc(0.412261deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img8.jpg)"></div>
-                                        <h2 class="Speaker-name">Miss Tara</h2>
-                                        <h3 class="Speaker-topic">DJ</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper Speaker--offset" style="transform: translate(calc(-5.13204px), calc(-55.4566px)) rotate(calc(-0.85534deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img9.jpg)"></div>
-                                        <h2 class="Speaker-name">Miss Tara</h2>
-                                        <h3 class="Speaker-topic">DJ</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper" style="transform: translate(calc(2.47357px), calc(-62.3375px)) rotate(calc(0.412261deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img10.jpg)"></div>
-                                        <h2 class="Speaker-name">Miss Tara</h2>
-                                        <h3 class="Speaker-topic">DJ</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Grid-cell u-sm-size12of12 u-lg-size5of12">
-                                <div class="Speaker-wrapper Speaker--offset" style="transform: translate(calc(-5.12992px), calc(-60.4156px)) rotate(calc(-0.854987deg));">
-                                    <div class="Speaker">
-                                        <div class="Speaker-headshot" style="background-image:url(img/speakers/img11.jpg)"></div>
-                                        <h2 class="Speaker-name">Miss Tara</h2>
-                                        <h3 class="Speaker-topic">DJ</h3>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script src="./js/subscribe.js"></script>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/trans1.js"></script>
-
-<section class="container_sub" id="temp-id"> 
-        <section class="one">
-         <div class="logo_sub">
-           <img src="https://image.flaticon.com/icons/svg/143/143361.svg" >
-         </div>
-         <h2 class="heading_sub">
-           Signup with your email to get latest updates 
-         </h2>
-         
-         <form method="post"  name="submit-to-google-sheet">
-            <input name="name" type='text' placeholder="enter your name" id="SubscribeName"><br/>
-           <input name="email" type='text' placeholder="enter your email" id="SubscribeEmail"><br/>
-           <button class="btn" id="SubscribeSubmitBtn" onclick="submitSubscribeInfo()">
-             Subscribe
-           </button>
     
-         </form>
-        </section>
-         <section class="two">
-           <h3>
-             Thank you for subscribing !
-           </h3>
-           <div class="close"> 
-           </div>
-         </section>
-       </section>
-
-    
-    <script src="form-script.js"></script>     
+  
+<script src="js/script_new.js"></script>     
     <script src="form-script-commented.js"></script>
     <!-- Footer -->
-    <footer class="footer container-fluid" id="element">
-        <div class="row" style="margin-top:80px;">
-            <div class="col-md-6">
-                <div class="footer__heading">Follow us on</div>
-                <div class="footer__line"></div>
-                <div class="footer__social-icon-box">
-                    <a href="https://www.instagram.com/p/B2bwXRqnvWV/?utm_source=ig_embed&amp;utm_campaign=loading" class="footer__social-icon" target="blank"><i class="fab fa-instagram"></i></i></a>
-                    <a href="https://twitter.com/blithchroniitgn?lang=en" target="blank" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/watch?v=zn4KcxFQ7SQ" class="footer__social-icon" target="blank"><i class="fab fa-youtube"></i></i></a>
-                    <a href="https://www.facebook.com/Blithchron/" class="footer__social-icon" target="blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="mailto:blithchron@iitgn.ac.in?subject=Blithchron" class="footer__social-icon" target="blank"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-
-
-            <div class="col-md-6">
-                <div class="footer__logo-box">
-                    <img src="img/logo_big.png" alt="Blithchron-Logo">
-                </div>
-                <div class="footer__iit-description">Indian Institute of Technology Gandhinagar<br/>Palaj, Gandhinagar<br/>Gujarat-382355</div>
-            </div>
-        </div>
-    </footer>
+    
 
 
     <!-- Scripts     -->
@@ -785,7 +794,7 @@
     <script type="text/javascript" src="js/wowslider.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
-    <script src="js/pronites_helper.js"></script>
+    
     <!-- Vanta.js -->
     <!-- <script src="js/three.r92.min.js"></script>
         <script src="js/vanta.waves.min.js"></script>
@@ -843,7 +852,8 @@
     <script src="js/pixi.js"></script>
     <script src="js/bg-stars-pixi.js"></script>
 
-<script type="text/javascript">
+
+    <script type="text/javascript">
         var target_date = new Date("February 1, 2020 00:00:00").getTime(); // set the countdown date
         var days, hours, minutes, seconds; // variables for time units
 
@@ -859,8 +869,8 @@
 
             // find the amount of "seconds" between now and target
             var current_date = new Date().getTime();
-            if ((target_date - current_date)/ 1000 >= 0){
-                var seconds_left = 0}
+            if ((target_date - current_date)/ 1000 != 0){
+                var seconds_left = (target_date - current_date) / 1000;}
 
             else{
                 var seconds_left = target_date - target_date
@@ -886,6 +896,7 @@
             return (n < 10 ? '0' : '') + n;
         }
     </script>
+
 
 
 </body>
